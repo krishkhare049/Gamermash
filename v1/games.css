@@ -1,0 +1,701 @@
+
+/* For phones- max-width:300px.*/
+
+@media(max-width:300px){
+/* Note - Do not set their position to keep them in one by one order. */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Baloo Bhai 2', Segoe UI;
+    background: url('/Images/secondheaderbackground2.png');
+    font-weight: 600;
+    font-size: 10px;
+    overflow-x: hidden;
+}
+
+/* Gamespage- */
+#Games{
+    text-decoration: overline;
+    color: white;
+}
+
+/* header- */
+header{
+    position: relative;
+    top: 228px;
+    left: 10px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background: rgb(0, 124, 255);
+    height: 57px;
+    width: 112px;
+    margin: 10px 5px;
+    margin-bottom: -10px;
+    color: white;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+header span{
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    /* text-align: center; */
+}
+
+header span p{
+    font-size: 15px;
+    margin-left: 2px;
+}
+
+#tap{
+    position: relative;
+    top: 240px;
+    left: 5px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background: rgb(0, 124, 255);
+    padding: 5px;
+    height: 28px;
+    width: 175px;
+    margin: 10px 5px;
+    margin-bottom: -12px;
+    color: white;
+    font-size: 16px;
+}
+/* Development- */
+#development{
+    position: absolute;
+    z-index: 2;
+    color: rgb(0,119,255);
+    text-align: center;
+    width: 100vw;
+    margin-top: 153px;
+    background: white;
+}
+
+.imghead{
+    position: relative;
+    top: -50px;
+    /* border: 1px solid black; */
+    border-bottom: 1px solid;
+    height: 180px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 2;
+}
+
+.imginhead{
+    position: absolute;
+    width: 100vw;
+    height: 180px;
+}
+
+/* Images of games- */
+#img1{
+    position: absolute;
+    left: 0vw;
+    background: white;
+}
+
+#img2{
+    position: absolute;
+    left: 102vw;
+    height: 186px;
+}
+
+#img3{
+    position: absolute;
+    left: 204vw;
+    height: 195px;
+    margin-top: -3px;
+}
+
+#img4{
+    position: absolute;
+    left: 306vw;
+    margin-top: -10px;
+    height: 190px;
+}
+
+/* Images of games end- */
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+/* a:hover{
+    color: black;
+} */
+
+.playgames{
+    position: absolute;
+    top: 360px;
+    left: -1px;
+    /* border: 2px solid black; */
+    width: 100vw;
+
+}
+
+.playgames p{
+    margin-left: 10px;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    width: 118px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inplaygames{
+    width: 97vw;
+    height: 180px;
+    margin: auto;
+    margin-bottom: 15px;
+    display: block;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+/* nav- */
+nav{
+    position: fixed;
+    top: 0px;
+    left: -28px;
+    /* border: 2px solid black; */
+    height: 30px;
+    width: 100vw;
+    background: rgb(0, 119, 255);
+    padding: 13px 10px 0px 51px;
+    z-index: 5;
+}
+
+/* loading- */
+#loader{
+    position: fixed;
+    top: 0;
+    left: -10px;
+    width: 106%;
+    height: 100%;
+    background: #19243C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* Its color is #18233b. */
+} 
+
+.loaderhidden{
+    animation: Fadeout 1s linear infinite;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 0px;
+}
+
+@keyframes Fadeout {
+    100%{
+        opacity: 0;
+    }
+}
+
+/* footer- */
+footer{
+    position: absolute;
+    top: 2720px;
+    /* position: relative; */
+    z-index: 5; /*for animation.*/
+    width: 100vw;
+    border: 2px solid black;
+    background: rgb(0, 119, 255);
+    font-size: 9px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    /* margin-top: 15px; */
+    margin-left: -2px;
+}
+
+.footeranchor{
+    margin: 5px;
+    /* border: 2px solid black; */
+    height: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(0,119,255);
+}
+
+.footeranchor:hover{
+    background: rgb(0, 81, 173);
+    color: white;
+}
+
+}
+
+
+/* For phones- min-width:300px and max-width:450px.*/
+
+@media(min-width:300px) and (max-width:450px){
+/* Note - Do not set their position to keep them in one by one order. */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Baloo Bhai 2', Segoe UI;
+    background: url('/Images/secondheaderbackground2.png');
+    font-weight: 600;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+/* Gamespage- */
+#Games{
+    text-decoration: overline;
+    color: white;
+}
+
+/* header- */
+header{
+    position: relative;
+    top: 228px;
+    left: 10px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background: rgb(0, 124, 255);
+    height: 57px;
+    width: 112px;
+    margin: 10px 5px;
+    margin-bottom: -10px;
+    color: white;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+header span{
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    /* text-align: center; */
+}
+
+header span p{
+    font-size: 15px;
+    margin-left: 2px;
+}
+
+#tap{
+    position: relative;
+    top: 240px;
+    left: 5px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background: rgb(0, 124, 255);
+    padding: 5px;
+    height: 28px;
+    width: 175px;
+    margin: 10px 5px;
+    margin-bottom: -12px;
+    color: white;
+    font-size: 16px;
+}
+/* Development- */
+#development{
+    position: absolute;
+    z-index: 2;
+    color: rgb(0,119,255);
+    text-align: center;
+    width: 100vw;
+    margin-top: 153px;
+    background: white;
+}
+
+.imghead{
+    position: relative;
+    top: -50px;
+    /* border: 1px solid black; */
+    border-bottom: 1px solid;
+    height: 180px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 2;
+}
+
+.imginhead{
+    position: absolute;
+    width: 100vw;
+    height: 180px;
+}
+
+/* Images of games- */
+#img1{
+    position: absolute;
+    left: 0vw;
+    background: white;
+}
+
+#img2{
+    position: absolute;
+    left: 102vw;
+    height: 186px;
+}
+
+#img3{
+    position: absolute;
+    left: 204vw;
+    height: 196px;
+    margin-top: -10px;
+}
+
+#img4{
+    position: absolute;
+    left: 306vw;
+    margin-top: -10px;
+    height: 190px;
+}
+
+/* Images of games end- */
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+/* a:hover{
+    color: black;
+} */
+
+.playgames{
+    position: absolute;
+    top: 360px;
+    left: -1px;
+    /* border: 2px solid black; */
+    width: 100vw;
+
+}
+
+.playgames p{
+    margin-left: 10px;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    width: 118px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inplaygames{
+    width: 97vw;
+    height: 180px;
+    margin: auto;
+    margin-bottom: 15px;
+    display: block;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+/* nav- */
+nav{
+    position: fixed;
+    top: 0px;
+    left: -28px;
+    /* border: 2px solid black; */
+    height: 30px;
+    width: 100vw;
+    background: rgb(0, 119, 255);
+    padding: 13px 10px 0px 51px;
+    z-index: 5;
+}
+
+/* loading- */
+#loader{
+    position: fixed;
+    top: 0;
+    left: -10px;
+    width: 106%;
+    height: 100%;
+    background: #19243C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* Its color is #18233b. */
+} 
+
+.loaderhidden{
+    animation: Fadeout 1s linear infinite;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 0px;
+}
+
+@keyframes Fadeout {
+    100%{
+        opacity: 0;
+    }
+}
+
+/* footer- */
+footer{
+    position: absolute;
+    top: 2850px;
+    /* position: relative; */
+    z-index: 5; /*for animation.*/
+    width: 100vw;
+    border: 2px solid black;
+    background: rgb(0, 119, 255);
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    /* margin-top: 15px; */
+    margin-left: -2px;
+}
+
+.footeranchor{
+    margin: 5px;
+    /* border: 2px solid black; */
+    height: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(0,119,255);
+}
+
+.footeranchor:hover{
+    background: rgb(0, 81, 173);
+    color: white;
+}
+
+}
+
+/* For tablets, pc and laptops- min-width:450px.*/
+
+@media(min-width:450px){
+/* Note - Do not set their position to keep them in one by one order. */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Baloo Bhai 2', Segoe UI;
+    background: url('/Images/secondheaderbackground2.png');
+    font-weight: 600;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+/* Gamespage- */
+#Games{
+    text-decoration: overline;
+    color: white;
+}
+
+/* header- */
+header{
+    position: relative;
+    top: 366px;
+    left: 20px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background: rgb(0, 124, 255);
+    height: 57px;
+    width: 112px;
+    margin: 10px 5px;
+    margin-bottom: -10px;
+    color: white;
+    font-size: 22px;
+    overflow: hidden;
+}
+
+header span{
+    position: absolute;
+    top: 13px;
+    left: 20px;
+    /* text-align: center; */
+}
+
+header span p{
+    font-size: 15px;
+    margin-left: 2px;
+}
+
+#tap{
+    position: relative;
+    top: 378px;
+    left: 20px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    background: rgb(0, 124, 255);
+    padding: 5px;
+    height: 28px;
+    width: 194px;
+    margin: 10px 5px;
+    color: white;
+    font-size: 18px;
+}
+
+/* Development- */
+#development{
+    position: absolute;
+    z-index: 2;
+    color: rgb(0,119,255);
+    text-align: center;
+    width: 100vw;
+    margin-top: 250px;
+    background: white;
+}
+
+.imghead{
+    position: relative;
+    top: -53px;
+    /* border: 1px solid black; */
+    border-bottom: 1px solid;
+    height: 300px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 2;
+
+}
+
+.imginhead{
+    position: absolute;
+    width: 100vw;
+    height: 300px;
+}
+
+/* Images of games- */
+#img1{
+    position: absolute;
+    left: 0vw;
+    background: white;
+}
+
+#img2{
+    position: absolute;
+    left: 102vw;
+    height: 320px;
+}
+
+#img3{
+    position: absolute;
+    left: 204vw;
+    height: 325px;
+    margin-top: -14px;
+}
+
+#img4{
+    position: absolute;
+    left: 306vw;
+    margin-top: -13px;
+    height: 310px;
+}
+
+/* Images of games end- */
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+/* a:hover{
+    color: black;
+} */
+
+.playgames{
+    position: absolute;
+    top: 500px;
+    left: -1px;
+    /* border: 2px solid black; */
+    width: 100vw;
+
+}
+
+.playgames p{
+    margin-left: 10px;
+    background-color: rgb(0, 119, 255);
+    color: white;
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.inplaygames{
+    width: 450px;
+    height: 250px;
+    margin: auto;
+    margin-bottom: 15px;
+    display: block;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+/* nav- */
+nav{
+    position: fixed;
+    top: 0px;
+    /* border: 2px solid black; */
+    height: 50px;
+    width: 100vw;
+    background: rgb(0, 119, 255);
+    padding: 13px 10px 0px 51px;
+    z-index: 5;
+}
+
+/* loading- */
+#loader{
+    position: fixed;
+    top: 0;
+    left: -10px;
+    width: 106%;
+    height: 100%;
+    background: #19243C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* Its color is #18233b. */
+} 
+
+.loaderhidden{
+    animation: Fadeout 1s linear infinite;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 0px;
+}
+
+@keyframes Fadeout {
+    100%{
+        opacity: 0;
+    }
+}
+
+
+/* footer- */
+footer{
+    position: absolute;
+    top: 3910px;
+    /* position: relative; */
+    z-index: 5; /*for animation.*/
+    width: 100vw;
+    border: 2px solid black;
+    background: rgb(0, 119, 255);
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    /* margin-top: 15px; */
+    margin-left: -2px;
+}
+
+.footeranchor{
+    margin: 5px;
+    /* border: 2px solid black; */
+    height: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(0,119,255);
+}
+
+.footeranchor:hover{
+    background: rgb(0, 81, 173);
+    color: white;
+}
+
+}

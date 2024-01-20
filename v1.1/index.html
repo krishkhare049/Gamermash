@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <title>Gamermash</title>
+    <link rel="icon" href="./images/gamermash.png" sizes="64x64">
+
+    <meta name="description" content="Welcome to Gamermash. Here you can play online html5 games...">
+    <meta name="keywords" content="Krish Khare, gamermash, online games">
+    <meta name="robots" content="index, follow">
+    <meta name="creator" content="Krish Khare">
+    <meta name="google-site-verification" content="do2qVAQxC3ZBQ7PgYSSS1A6FQ528MqmsUx_Nt6KwDLY" />
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./libraries/css/swiper-bundle.min.css">
+
+    <style>
+        #loader {
+            color: rgb(0, 119, 255);
+            /* background: white; */
+            background: #172136;
+            /* background: linear-gradient(to right bottom, rgb(0, 59, 125), rgb(26, 126, 240), #ff0083); */
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #loader_name_div_bg {
+            padding-top: 5px;
+            border-radius: 30px;
+            /* background: linear-gradient(to right bottom, rgb(0, 59, 125), rgb(26, 126, 240), #ff0083); */
+        }
+
+        #loader_name_div {
+            padding: 5px;
+            /* background: #fff; */
+            background: #172136;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #loader_name_div img {
+            width: 280px;
+        }
+
+        #loader span {
+            font-size: 31px;
+            /* background: linear-gradient(to right bottom, rgb(0, 59, 125), rgb(26, 126, 240), #ff0083); */
+            /* background-clip: border-box; */
+            text-shadow: 3px 3px rgb(98, 0, 172);
+            /* -webkit-text-fill-color: transparent; */
+            /* -webkit-background-clip: text; */
+            /* background-clip: text; */
+            color: white;
+            font-weight: 900;
+        }
+
+        .loader_spinner {
+            width: 30px;
+            height: 30px;
+            border: 5px solid transparent;
+            border-top-color: #5f97ff;
+            border-bottom-color: #0052ec;
+            border-radius: 50%;
+            /* position: relative; */
+            animation: loader-rotate 1s linear infinite;
+            /* top: 50%; */
+            margin-top: 17px;
+        }
+
+        /* .loader_spinner::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #0052ec;
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            margin-left: -5px;
+        } */
+
+        @keyframes loader-rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<!-- <body> -->
+
+    <body onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false"
+    onDrag="return false" onDrop="return false" autocomplete=off oncontextmenu="return false">
+
+    <!-- Loader- -->
+    <div id="loader">
+
+        <div id="loader_name_div_bg">
+            <div id="loader_name_div">
+                <img src="/images/loading1-unscreen.gif" alt="">
+                <span>Gamermash</span><br>
+                <span
+                    style="font-size: 14px; margin-top: 10px; text-shadow: 3px 3px rgb(0, 76, 255); font-weight: 100;">An
+                    open source games website</span>
+                <span
+                    style="font-size: 14px; margin-top: 10px; text-shadow: 3px 3px rgb(0, 76, 255); font-weight: 100;">-:Made
+                    by Krish Khare:-</span>
+            </div>
+        </div>
+        <!-- <div class="loader_spinner"></div> -->
+
+    </div>
+
+    <!-- <div id="gamermash_title">
+        <img src="./images/cartoon_img.jpg" alt="">
+        <span>KRISH KHARE</span>
+    </div> -->
+
+
+    <header>
+
+        <div id="gamermash_title">
+            <img src="./images/gamermash.png" alt="">
+            <span>Gamermash</span>
+        </div>
+
+        <div id="nav">
+
+
+            <div class="nav_icons active_nav_icon" id="home_icon">
+
+                <svg width="261pt" height="261pt" version="1.0" viewBox="0 0 261 261"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g transform="translate(0 261) scale(.1 -.1)">
+                        <path
+                            d="m1226 2269c-35-19-99-75-501-439-76-69-159-142-184-163s-75-66-111-101c-36-34-89-82-119-106-30-25-64-66-77-92l-24-47v-481c0-526 1-536 56-558 21-9 140-12 439-10l410 3 5 260c5 273 8 290 54 328 94 79 244 54 294-49 21-42 22-59 22-294v-250h417c415 0 417 0 449 22 18 13 35 32 38 43s6 241 6 511v491l-30 45c-17 26-47 59-67 74s-73 61-118 103-157 144-250 226c-92 83-220 197-284 255-174 158-247 219-278 235-40 21-102 19-147-6z" />
+                    </g>
+                </svg>
+                <span>Home</span>
+
+            </div>
+            <div class="nav_icons" id="games_icon">
+
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M1180 4124 c-266 -71 -507 -320 -720 -743 -204 -407 -375 -968 -435
+                -1426 -34 -259 -30 -523 11 -683 35 -138 122 -253 212 -280 140 -42 330 26
+                562 200 122 93 408 378 534 535 l98 123 1118 0 1118 0 98 -122 c134 -167 413
+                -445 549 -546 224 -167 409 -231 547 -190 90 27 177 142 212 280 104 409 -36
+                1216 -331 1907 -201 471 -441 783 -694 900 -130 61 -277 77 -422 46 -159 -34
+                -344 -132 -462 -247 l-69 -68 -546 0 -546 0 -69 68 c-118 115 -303 213 -462
+                247 -87 19 -232 18 -303 -1z m2591 -618 c123 -82 102 -284 -34 -335 -39 -15
+                -111 -14 -150 3 -73 30 -125 127 -112 207 9 53 58 117 108 140 56 26 134 20
+                188 -15z m-2237 -68 c13 -18 16 -54 16 -185 l0 -163 162 0 c209 0 198 9 198
+                -162 0 -175 9 -168 -200 -168 l-160 0 0 -164 0 -165 -26 -20 c-24 -19 -40 -21
+                -150 -21 -171 0 -164 -9 -164 205 l0 165 -158 0 c-212 0 -202 -8 -202 162 0
+                178 -11 168 197 168 l163 0 0 163 c0 219 -10 207 170 207 132 0 140 -1 154
+                -22z m1838 -327 c169 -108 70 -375 -130 -347 -91 12 -153 80 -160 175 -8 117
+                69 200 189 201 44 0 64 -6 101 -29z m776 10 c20 -10 45 -27 54 -38 43 -47 60
+                -140 37 -200 -24 -64 -109 -122 -179 -123 -49 0 -118 37 -154 83 -28 35 -31
+                46 -31 106 0 57 4 74 27 109 16 23 45 50 65 61 50 26 132 27 181 2z m-391
+                -398 c56 -29 96 -99 96 -166 0 -58 -12 -87 -52 -130 -39 -42 -76 -58 -137 -58
+                -171 0 -254 201 -133 322 62 62 146 73 226 32z" />
+                    </g>
+                </svg>
+                <span>Games</span>
+
+            </div>
+            <div class="nav_icons" id="creator_icon">
+
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"
+                    id="default_user_library_icon">
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M2410 4684 c-235 -43 -407 -127 -564 -275 -145 -138 -227 -265 -285
+             -445 -133 -408 4 -858 343 -1130 96 -77 269 -165 378 -193 259 -66 509 -41
+             743 74 523 258 733 880 473 1400 -108 216 -304 399 -528 494 -132 57 -210 72
+             -380 76 -85 2 -166 1 -180 -1z" />
+                        <path d="M1865 2159 c-374 -48 -717 -295 -890 -639 -128 -257 -159 -564 -71
+             -714 102 -175 442 -292 1016 -352 213 -22 824 -30 1073 -15 595 37 1012 144
+             1155 295 116 123 142 259 97 502 -75 400 -371 739 -761 870 -172 58 -164 57
+             -884 60 -366 1 -696 -2 -735 -7z" />
+                    </g>
+                </svg>
+                <span>Creator</span>
+            </div>
+        </div>
+
+    </header>
+
+    <div id="smooth_scroll_to_top">
+        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+            viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" style="rotate: 180deg;">
+
+            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path d="M2058 4727 c-31 -13 -74 -38 -95 -55 -77 -62 -1882 -1878 -1907
+-1920 -38 -61 -60 -154 -52 -225 14 -132 -40 -73 1014 -1129 795 -796 975
+-971 1020 -994 78 -39 202 -46 285 -14 89 34 153 90 191 169 28 60 31 75 31
+161 0 165 16 144 -562 729 -274 278 -534 536 -579 575 -45 40 -118 91 -167
+116 l-86 45 1837 5 1837 5 57 23 c81 33 160 108 200 190 30 60 33 75 33 152
+-1 70 -5 95 -27 142 -35 76 -99 143 -173 181 l-60 32 -1855 5 -1855 5 95 50
+95 49 576 576 c665 664 634 624 634 795 0 89 -3 106 -28 156 -15 31 -50 78
+-77 103 -72 68 -126 89 -235 93 -77 3 -98 0 -147 -20z" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Slider main container -->
+    <!-- <div class="page_swiper"> -->
+    <!-- Additional required wrapper -->
+    <!-- <div class="swiper-wrapper"> -->
+
+    <!-- Slides -->
+    <!-- <div class="swiper-slide"> -->
+
+    <div id="home_page" class="pages active_page">
+
+        <div id="my_intro_bg" class="">
+
+            <div id="my_intro">
+                <img src="./images/gamermash.png" alt="">
+
+
+                <div id="my_intro_info">
+                    <span>Welcome to</span>
+                    <span id="my_intro_my_name">Gamermash</span>
+                    <span>Your portal to a world of</span>
+                    <span style="font-size: 20px; color: rgb(0, 0, 0);">Open source gaming!</span>
+                    <span>immerse yourself in a diverse collection of community-driven games...</span>
+                    <span style="color: rgb(0, 51, 204);">Let the open source adventure begin...</span>
+
+                    <!-- <div id="my_intro_info_btns">
+
+                        <a href="./data/krishkhare_resume.pdf" target="_blank" rel="noopener noreferrer"
+                            download="./data/krishkhare_resume.pdf">
+
+                            <div id="resume">
+
+                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt"
+                                    height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+                                    preserveAspectRatio="xMidYMid meet">
+
+                                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                        fill="#000000" stroke="none">
+                                        <path d="M1161 4784 c-169 -45 -301 -180 -346 -351 -23 -86 -23 -3660 0 -3746
+                                           45 -173 178 -307 350 -352 52 -13 228 -15 1395 -15 1470 0 1390 -3 1511 61 70
+                                           38 157 126 193 197 59 116 56 43 56 1554 l0 1388 -428 0 c-463 0 -488 2 -594
+                                           56 -71 36 -159 123 -197 193 -59 111 -61 133 -61 603 l0 428 -912 -1 c-764 0
+                                           -922 -3 -967 -15z m1034 -799 c256 -67 415 -329 350 -578 -45 -173 -178 -307
+                                           -350 -352 -251 -65 -513 94 -580 350 -89 343 237 669 580 580z m1411 -971 c53
+                                           -39 69 -71 69 -134 0 -63 -16 -95 -69 -134 -25 -19 -44 -21 -224 -24 -223 -4
+                                           -256 2 -301 53 -52 59 -54 147 -4 206 47 55 67 59 295 56 191 -2 209 -4 234
+                                           -23z m-1253 -149 c179 -46 320 -193 357 -369 7 -34 10 -135 8 -265 -3 -230 -5
+                                           -235 -72 -285 -27 -21 -38 -21 -566 -21 -528 0 -539 0 -566 21 -67 50 -69 55
+                                           -72 285 -2 130 1 231 8 265 36 174 177 321 353 369 76 20 472 20 550 0z m1253
+                                           -651 c53 -39 69 -71 69 -134 0 -63 -16 -95 -69 -134 -25 -19 -44 -21 -224 -24
+                                           -223 -4 -256 2 -301 53 -52 59 -54 147 -4 206 47 55 67 59 295 56 191 -2 209
+                                           -4 234 -23z m0 -800 c53 -39 69 -71 69 -134 0 -63 -16 -95 -69 -134 -27 -21
+                                           -35 -21 -1024 -24 -681 -2 -1009 0 -1034 8 -101 29 -140 168 -71 251 52 61 -4
+                                           59 1095 56 999 -2 1007 -2 1034 -23z" />
+                                        <path d="M3360 4337 c0 -288 3 -375 14 -400 17 -42 68 -85 109 -92 18 -3 191
+                                           -4 385 -3 l352 3 -430 430 -430 430 0 -368z" />
+                                    </g>
+                                </svg>
+                                <span>Resume</span>
+
+                            </div>
+
+                        </a>
+
+
+                    </div> -->
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="games_intro_outer_div" class="">
+
+            <div id="games_intro">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                    viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                        stroke="none">
+                        <path d="M1180 4124 c-266 -71 -507 -320 -720 -743 -204 -407 -375 -968 -435
+                -1426 -34 -259 -30 -523 11 -683 35 -138 122 -253 212 -280 140 -42 330 26
+                562 200 122 93 408 378 534 535 l98 123 1118 0 1118 0 98 -122 c134 -167 413
+                -445 549 -546 224 -167 409 -231 547 -190 90 27 177 142 212 280 104 409 -36
+                1216 -331 1907 -201 471 -441 783 -694 900 -130 61 -277 77 -422 46 -159 -34
+                -344 -132 -462 -247 l-69 -68 -546 0 -546 0 -69 68 c-118 115 -303 213 -462
+                247 -87 19 -232 18 -303 -1z m2591 -618 c123 -82 102 -284 -34 -335 -39 -15
+                -111 -14 -150 3 -73 30 -125 127 -112 207 9 53 58 117 108 140 56 26 134 20
+                188 -15z m-2237 -68 c13 -18 16 -54 16 -185 l0 -163 162 0 c209 0 198 9 198
+                -162 0 -175 9 -168 -200 -168 l-160 0 0 -164 0 -165 -26 -20 c-24 -19 -40 -21
+                -150 -21 -171 0 -164 -9 -164 205 l0 165 -158 0 c-212 0 -202 -8 -202 162 0
+                178 -11 168 197 168 l163 0 0 163 c0 219 -10 207 170 207 132 0 140 -1 154
+                -22z m1838 -327 c169 -108 70 -375 -130 -347 -91 12 -153 80 -160 175 -8 117
+                69 200 189 201 44 0 64 -6 101 -29z m776 10 c20 -10 45 -27 54 -38 43 -47 60
+                -140 37 -200 -24 -64 -109 -122 -179 -123 -49 0 -118 37 -154 83 -28 35 -31
+                46 -31 106 0 57 4 74 27 109 16 23 45 50 65 61 50 26 132 27 181 2z m-391
+                -398 c56 -29 96 -99 96 -166 0 -58 -12 -87 -52 -130 -39 -42 -76 -58 -137 -58
+                -171 0 -254 201 -133 322 62 62 146 73 226 32z" />
+                    </g>
+                </svg>
+                <span>Games</span>
+            </div>
+
+            <div id="games_small_container">
+
+                <!-- <a href="https://gamermash-clumsy-bird.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <div class="games_small_items"><img src="/images/clumsyimg.gif" alt=""><span>Clumsy bird</span></div>
+                </a>
+                <a href="https://gamermash-clumsy-bird.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <div class="games_small_items"><img src="/images/Screenshot_2020-12-23 Pacman Canvas in HTML5.png" alt=""><span>Pacman</span></div>
+                </a>
+                <a href="https://gamermash-clumsy-bird.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <div class="games_small_items"><img src="/images/Screen Shot 2020-12-21 at 15.10.26.png" alt=""><span>Duck hunt</span></div>
+                </a>
+                <a href="https://gamermash-clumsy-bird.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <div class="games_small_items"><img src="/images/jumpingd.png" alt=""><span>The jumping dead</span></div>
+                </a>
+                <a href="https://gamermash-clumsy-bird.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <div class="games_small_items"><img src="/images/Screenshot_2020-12-27 Tower(1).png" alt=""><span>Tower
+                        Building</span></div>
+                </a>
+                <a href="https://gamermash-clumsy-bird.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <div class="games_small_items"><img src="/images/Screenshot_2021-01-02 Tic Tac Toe.png" alt=""><span>Tic
+                        Tac Toe</span></div>
+                </a>
+                <a href="https://gamermash-clumsy-bird.netlify.app" target="_blank" rel="noopener noreferrer">
+                    <div class="games_small_items"><img src="/images/gamermash.png" alt=""><span>Gamermash jigsaw</span></div>
+                </a> -->
+
+                <!-- <div class="games_small_items"><img src="/images/Screenshot_2020-12-23 Pacman Canvas in HTML5.png"
+                        alt=""><span>Pacman - By Platzh1rsch</span></div>
+
+                <div class="games_small_items"><img src="/images/Screen Shot 2020-12-21 at 15.10.26.png"
+                        alt=""><span>Duck hunt- By Matt Surabian</span></div>
+
+                <div class="games_small_items"><img src="/images/jumpingd.png" alt=""><span>The jumping dead - Edward
+                        Dunn</span></div>
+
+                <div class="games_small_items"><img src="/images/Screenshot_2020-12-27 Tower(1).png" alt=""><span>Tower
+                        Building</span></div>
+
+                <div class="games_small_items"><img src="/images/Screenshot_2021-01-02 Tic Tac Toe.png" alt=""><span>Tic
+                        Tac Toe</span></div>
+
+                <div class="games_small_items"><img src="/images/gamermash.png" alt=""><span>Gamermash jigsaw</span>
+                </div> -->
+
+                <img src="./images/games_mix.jpg" alt="" id="gsc_img">
+                
+                <div id="skillset">
+                    <span id="skillset_intro">Games</span>
+                    <div class="skill_item">
+                        <span>Clumsy Bird</span>
+                    </div>
+                    <div class="skill_item">
+                        <span>Pacman</span>
+                    </div>
+                    <div class="skill_item">
+                        <span>Duck hunt</span>
+                    </div>
+                    <div class="skill_item">
+                        <span>The jumping dead</span>
+                    </div>
+                    <div class="skill_item">
+                        <span>Tower Building</span>
+                    </div>
+                    <div class="skill_item">
+                        <span>Tic Tac Toe</span>
+                    </div>
+                    <div class="skill_item">
+                        <span>Gamermash jigsaw</span>
+                    </div>
+                </div>
+
+                <div id="play_games_here">
+                    <span>Play games here</span>
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet" style="rotate: 180deg;">
+
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M2058 4727 c-31 -13 -74 -38 -95 -55 -77 -62 -1882 -1878 -1907
+    -1920 -38 -61 -60 -154 -52 -225 14 -132 -40 -73 1014 -1129 795 -796 975
+    -971 1020 -994 78 -39 202 -46 285 -14 89 34 153 90 191 169 28 60 31 75 31
+    161 0 165 16 144 -562 729 -274 278 -534 536 -579 575 -45 40 -118 91 -167
+    116 l-86 45 1837 5 1837 5 57 23 c81 33 160 108 200 190 30 60 33 75 33 152
+    -1 70 -5 95 -27 142 -35 76 -99 143 -173 181 l-60 32 -1855 5 -1855 5 95 50
+    95 49 576 576 c665 664 634 624 634 795 0 89 -3 106 -28 156 -15 31 -50 78
+    -77 103 -72 68 -126 89 -235 93 -77 3 -98 0 -147 -20z" />
+                        </g>
+                    </svg>
+                </div>
+
+                
+            </div>
+
+            <br>
+            <br>
+
+        </div>
+
+    </div>
+
+    <!-- </div> -->
+    <!-- <div class="swiper-slide"> -->
+
+    <div id="games_page" class="pages">
+        <br>
+
+        <!-- Swiper -->
+        <div class="swiper games_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/video-games-icegif-1.gif" alt="" class="swiper_gifs"></div>
+                <div class="swiper-slide"><img src="./images/gamegif1.gif" alt="" class="swiper_gifs"></div>
+                <div class="swiper-slide"><img src="./images/gamegif2.gif" alt="" class="swiper_gifs"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <div id="games_intro">
+            <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                    <path d="M1180 4124 c-266 -71 -507 -320 -720 -743 -204 -407 -375 -968 -435
+            -1426 -34 -259 -30 -523 11 -683 35 -138 122 -253 212 -280 140 -42 330 26
+            562 200 122 93 408 378 534 535 l98 123 1118 0 1118 0 98 -122 c134 -167 413
+            -445 549 -546 224 -167 409 -231 547 -190 90 27 177 142 212 280 104 409 -36
+            1216 -331 1907 -201 471 -441 783 -694 900 -130 61 -277 77 -422 46 -159 -34
+            -344 -132 -462 -247 l-69 -68 -546 0 -546 0 -69 68 c-118 115 -303 213 -462
+            247 -87 19 -232 18 -303 -1z m2591 -618 c123 -82 102 -284 -34 -335 -39 -15
+            -111 -14 -150 3 -73 30 -125 127 -112 207 9 53 58 117 108 140 56 26 134 20
+            188 -15z m-2237 -68 c13 -18 16 -54 16 -185 l0 -163 162 0 c209 0 198 9 198
+            -162 0 -175 9 -168 -200 -168 l-160 0 0 -164 0 -165 -26 -20 c-24 -19 -40 -21
+            -150 -21 -171 0 -164 -9 -164 205 l0 165 -158 0 c-212 0 -202 -8 -202 162 0
+            178 -11 168 197 168 l163 0 0 163 c0 219 -10 207 170 207 132 0 140 -1 154
+            -22z m1838 -327 c169 -108 70 -375 -130 -347 -91 12 -153 80 -160 175 -8 117
+            69 200 189 201 44 0 64 -6 101 -29z m776 10 c20 -10 45 -27 54 -38 43 -47 60
+            -140 37 -200 -24 -64 -109 -122 -179 -123 -49 0 -118 37 -154 83 -28 35 -31
+            46 -31 106 0 57 4 74 27 109 16 23 45 50 65 61 50 26 132 27 181 2z m-391
+            -398 c56 -29 96 -99 96 -166 0 -58 -12 -87 -52 -130 -39 -42 -76 -58 -137 -58
+            -171 0 -254 201 -133 322 62 62 146 73 226 32z" />
+                </g>
+            </svg>
+            <span>Games</span>
+        </div>
+
+        <div id="project_container">
+            <span
+                style="background: rgb(0, 119, 255); color: white; padding: 4px 10px; border-radius: 10px; font-size: 20px;">Tap
+                on games to play</span>
+
+            <a href="https://gamermash-clumsy-bird.netlify.app" target="_blank" rel="noopener noreferrer">
+                <div class="projects_card"><img src="./images/clumsyimg.gif" alt="">
+                    <div class="project_card_info">
+                        <span class="project_card_title">Clumsy Bird</span>
+                        <span style="font-size: 13px;">- By Ellison Leao</span>
+                        <span class="project_card_description">Let the bird fly...</span>
+                        <br>
+                        <span style="color: black; text-decoration: underline;">Click to play</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://gamermash-pacman.netlify.app" target="_blank" rel="noopener noreferrer">
+                <div class="projects_card"><img src="./images/Screenshot_2020-12-23 Pacman Canvas in HTML5.png" alt="">
+                    <div class="project_card_info">
+                        <span class="project_card_title">Pacman</span>
+                        <span style="font-size: 13px;">- By Platzh1rsch</span>
+                        <span class="project_card_description">Enjoy the escape...</span>
+                        <span style="color: black; text-decoration: underline;">Click to play</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://gamermash-duck.netlify.app/dist" target="_blank" rel="noopener noreferrer">
+                <div class="projects_card"><img src="./images/duck_hunt.jpg" alt="">
+                    <div class="project_card_info">
+                        <span class="project_card_title">Duck hunt</span>
+                        <span style="font-size: 13px;">- By Matt Surabian</span>
+
+                        <span class="project_card_description">Shoot the bird...</span>
+                        <span style="color: black; text-decoration: underline;">Click to play</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://gamermash-jumping-dead.netlify.app" target="_blank" rel="noopener noreferrer">
+                <div class="projects_card"><img src="./images/jumpingd.jpg" alt="">
+                    <div class="project_card_info">
+                        <span class="project_card_title">The jumping dead</span>
+                        <span style="font-size: 13px;">- Edward Dunn</span>
+
+                        <span class="project_card_description">Jump...</span>
+                        <span style="color: black; text-decoration: underline;">Click to play</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://gamermash-tower.netlify.app" target="_blank" rel="noopener noreferrer">
+                <div class="projects_card"><img src="./images/tower_building.jpg" alt="">
+                    <div class="project_card_info">
+                        <span class="project_card_title">Tower Building</span>
+
+                        <span class="project_card_description">Build the highest tower...</span>
+                        <span style="color: black; text-decoration: underline;">Click to play</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://gamermash-tic-tac-toe.netlify.app" target="_blank" rel="noopener noreferrer">
+                <div class="projects_card"><img src="./images/Screenshot_2021-01-02 Tic Tac Toe.png" alt="">
+                    <div class="project_card_info">
+                        <span class="project_card_title">Tic Tac Toe</span>
+
+                        <span class="project_card_description">Tic Tac Toe o x...</span>
+                        <span style="color: black; text-decoration: underline;">Click to play</span>
+                    </div>
+                </div>
+            </a>
+            <a href="https://gamermash-jigsaw.netlify.app/demo/demo.html" target="_blank" rel="noopener noreferrer">
+                <div class="projects_card"><img src="./images/gamermash.png" alt="">
+                    <div class="project_card_info">
+                        <span class="project_card_title">Gamermash jigsaw</span>
+                        <span style="font-size: 13px;">- By Eric-jr</span>
+
+                        <span class="project_card_description">Solve the puzzle...</span>
+                        <span style="color: black; text-decoration: underline;">Click to play</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- </div> -->
+    <!-- <div class="swiper-slide"> -->
+
+    <!-- </div> -->
+    <!-- <div class="swiper-slide"> -->
+
+    <div id="aboutme_page" class="pages">
+
+        <div id="aboutme_intro_bg">
+            <div id="aboutme_intro">
+                <div>
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"
+                        id="default_user_library_icon">
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M2410 4684 c-235 -43 -407 -127 -564 -275 -145 -138 -227 -265 -285
+             -445 -133 -408 4 -858 343 -1130 96 -77 269 -165 378 -193 259 -66 509 -41
+             743 74 523 258 733 880 473 1400 -108 216 -304 399 -528 494 -132 57 -210 72
+             -380 76 -85 2 -166 1 -180 -1z" />
+                            <path d="M1865 2159 c-374 -48 -717 -295 -890 -639 -128 -257 -159 -564 -71
+             -714 102 -175 442 -292 1016 -352 213 -22 824 -30 1073 -15 595 37 1012 144
+             1155 295 116 123 142 259 97 502 -75 400 -371 739 -761 870 -172 58 -164 57
+             -884 60 -366 1 -696 -2 -735 -7z" />
+                        </g>
+                    </svg>
+                    <span>Creator</span>
+                </div>
+                <span>-: My info :-</span>
+            </div>
+        </div>
+
+        <div id="aboutme_container">
+
+            <div id="about_note">
+                <img src="./images/bus_coat.jpg" alt="" id="aboutme_img">
+
+                <div>
+                    <span>Hello, Krish Khare here, I live in Jhansi. I am a Web Developer. I am pursuing my B.Tech. in
+                        Computer Science. If you need a website, you can contact me. For further information, see
+                        contact information below.</span>
+                </div>
+
+            </div>
+            <hr style="color: #060606; width: 80%;">
+
+            <div id="skillset">
+                <span id="skillset_intro">Skills</span>
+                <div class="skill_item">
+                    <span>HTML5</span>
+                </div>
+                <div class="skill_item">
+                    <span>CSS</span>
+                </div>
+                <div class="skill_item">
+                    <span>JS</span>
+                </div>
+                <div class="skill_item">
+                    <span>Node Js</span>
+                </div>
+                <div class="skill_item">
+                    <span>MongoDB</span>
+                </div>
+            </div>
+
+            <div id="contact_container">
+                <div class="contact_items">
+                    <?xml version="1.0" standalone="no"?>
+                    <!DOCTYPE svg
+                        PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M2385 5109 c-559 -58 -1049 -402 -1308 -915 -43 -86 -111 -283 -131
+    -384 -74 -364 -26 -736 135 -1064 24 -49 341 -553 704 -1120 490 -765 669
+    -1037 694 -1053 46 -31 116 -31 162 0 24 16 206 291 691 1047 362 564 680
+    1070 707 1125 188 383 221 827 90 1228 -84 257 -215 471 -405 661 -355 355
+    -840 527 -1339 475z m360 -912 c269 -75 478 -288 546 -557 8 -31 14 -105 14
+    -170 0 -123 -12 -188 -53 -285 -93 -219 -290 -387 -522 -446 -71 -18 -269 -18
+    -340 0 -232 59 -429 227 -522 446 -41 97 -53 162 -53 285 0 123 12 188 53 285
+    93 220 305 400 522 444 30 6 64 13 75 15 37 9 229 -3 280 -17z" />
+                            <path d="M1244 1635 c-728 -203 -1062 -553 -886 -928 32 -70 124 -174 212
+    -242 291 -223 840 -384 1525 -447 183 -17 747 -17 930 0 685 63 1234 224 1525
+    447 88 68 180 172 212 242 177 378 -171 736 -906 933 -98 26 -121 29 -131 18
+    -7 -7 -175 -269 -375 -583 -200 -314 -381 -592 -402 -620 -194 -251 -592 -250
+    -779 2 -20 26 -204 310 -409 631 -204 320 -377 582 -384 581 -6 0 -66 -16
+    -132 -34z" />
+                        </g>
+                    </svg>
+                    <span style="background: rgb(0, 0, 0); color: white; padding: 2px 5px; border-radius: 5px;">Jhansi,
+                        Uttar Pradesh, India</span>
+                </div>
+                <div class="contact_items">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="297.000000pt" height="271.000000pt"
+                        viewBox="0 0 297.000000 271.000000" preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,271.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M547 2550 c-63 -16 -91 -36 -161 -112 -79 -85 -107 -130 -140 -224
+               -82 -234 -50 -467 101 -739 45 -82 201 -316 223 -335 3 -3 44 -52 91 -110 209
+               -255 462 -476 704 -613 191 -108 512 -230 694 -262 233 -43 447 21 607 181 63
+               62 85 104 113 213 28 111 28 184 1 211 -11 11 -82 50 -158 86 -75 37 -180 87
+               -232 113 -227 110 -242 108 -354 -53 -36 -50 -82 -112 -104 -136 -37 -42 -41
+               -44 -104 -48 -55 -4 -75 0 -137 26 -193 82 -385 212 -532 364 -131 135 -151
+               159 -230 276 -82 119 -103 165 -94 200 7 29 59 97 141 185 30 32 63 75 72 94
+               19 40 23 28 -98 323 -90 221 -142 331 -164 350 -22 17 -182 24 -239 10z" />
+                        </g>
+                    </svg>
+                    <span><a href="tel:+8081998420"
+                            style="color: rgb(0, 0, 0); background: white; padding: 2px 5px; border-radius: 5px;">Call</a></span>
+                </div>
+                <div class="contact_items">
+                    <?xml version="1.0" standalone="no"?>
+                    <!DOCTYPE svg
+                        PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M366 4464 c-255 -62 -415 -322 -351 -569 20 -75 57 -143 107 -195 45
+    -46 2175 -1471 2253 -1506 119 -54 260 -52 382 5 95 45 2182 1442 2235 1496
+    249 254 113 686 -243 770 -94 22 -4291 21 -4383 -1z" />
+                            <path d="M0 2236 c0 -810 3 -1181 11 -1218 37 -176 179 -320 360 -363 94 -22
+    4267 -22 4372 0 182 38 329 184 366 363 13 61 16 2386 3 2380 -4 -1 -487 -323
+    -1074 -715 -587 -392 -1099 -729 -1139 -748 -110 -56 -204 -77 -339 -77 -135
+    0 -229 21 -339 77 -40 19 -552 356 -1139 748 -587 392 -1070 714 -1074 715 -5
+    2 -8 -521 -8 -1162z" />
+                        </g>
+                    </svg>
+                    <span><a href="mailto:kharekrish049@gmail.com"
+                            style="color: rgb(0, 0, 0); background: white; padding: 2px 5px; border-radius: 5px;">kharekrish049@gmail.com</a></span>
+                </div>
+                <div class="contact_items">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt"
+                        viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet"
+                        style="filter: invert(43%) sepia(81%) saturate(6522%) hue-rotate(205deg) brightness(107%) contrast(102%)">
+
+                        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M395 5110 c-176 -28 -312 -145 -371 -320 -18 -53 -19 -130 -19 -2230
+    0 -2100 1 -2177 19 -2230 49 -146 148 -247 294 -303 l57 -22 2185 0 2185 0 57
+    22 c146 56 245 157 294 303 18 53 19 130 19 2230 0 2100 -1 2177 -19 2230 -49
+    146 -148 247 -294 303 l-57 22 -2150 1 c-1182 1 -2172 -2 -2200 -6z m880 -565
+    c207 -44 382 -218 424 -423 78 -376 -262 -724 -634 -649 -200 41 -355 175
+    -421 366 -31 89 -35 228 -9 318 42 148 150 276 289 343 124 60 222 72 351 45z
+    m2625 -1298 c169 -44 276 -104 383 -215 166 -170 253 -399 288 -757 9 -91 13
+    -353 14 -875 0 -702 -1 -747 -18 -773 -10 -16 -32 -37 -50 -47 -30 -19 -53
+    -20 -365 -20 -363 0 -370 1 -411 58 -19 28 -20 46 -24 763 -3 623 -6 744 -19
+    799 -38 154 -98 254 -188 308 -78 46 -121 57 -235 56 -131 0 -192 -23 -279
+    -105 -72 -67 -123 -159 -159 -287 -21 -75 -22 -97 -27 -792 -5 -668 -6 -717
+    -23 -742 -38 -55 -56 -58 -404 -58 -356 0 -368 2 -405 71 -17 32 -18 92 -18
+    1267 0 1368 -4 1281 64 1323 29 18 56 19 361 19 310 0 332 -1 362 -20 52 -31
+    63 -64 63 -192 l1 -113 22 30 c74 102 202 206 309 253 141 61 271 82 488 78
+    147 -3 190 -8 270 -29z m-2379 -30 c19 -12 42 -38 52 -57 16 -33 17 -109 15
+    -1272 -3 -1233 -3 -1237 -24 -1265 -45 -61 -58 -63 -402 -63 -338 0 -341 0
+    -392 55 l-25 27 -3 1250 c-2 1206 -2 1252 16 1280 11 16 32 38 48 49 27 18 51
+    19 355 19 322 0 326 0 360 -23z" />
+                        </g>
+                    </svg>
+                    <span><a href="https://www.linkedin.com/in/krish-khare-8b1a8b274/" target="_blank"
+                            rel="noopener noreferrer"
+                            style="color: rgb(0, 0, 0); background: white; padding: 2px 5px; border-radius: 5px;">LinkedIn</a></span>
+                </div>
+                <div class="contact_items">
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="48.000000pt" height="48.000000pt"
+                        viewBox="0 0 48.000000 48.000000" preserveAspectRatio="xMidYMid meet"
+                        style="filter: invert(28%) sepia(86%) saturate(4198%) hue-rotate(311deg) brightness(101%) contrast(104%);">
+
+                        <g transform="translate(0.000000,48.000000) scale(0.100000,-0.100000)" fill="#000000"
+                            stroke="none">
+                            <path d="M108 414 c-46 -24 -58 -61 -58 -174 0 -165 25 -190 190 -190 165 0
+                   190 25 190 190 0 166 -25 190 -192 190 -71 -1 -111 -5 -130 -16z m263 -43 c28
+                   -29 29 -32 29 -131 0 -99 -1 -102 -29 -131 -29 -28 -32 -29 -131 -29 -99 0
+                   -102 1 -131 29 -28 29 -29 32 -29 131 0 99 1 102 29 131 29 28 32 29 131 29
+                   99 0 102 -1 131 -29z" />
+                            <path d="M324 349 c-10 -17 13 -36 27 -22 12 12 4 33 -11 33 -5 0 -12 -5 -16
+                   -11z" />
+                            <path d="M191 326 c-87 -48 -50 -186 49 -186 51 0 100 49 100 99 0 75 -83 124
+                   -149 87z m96 -38 c29 -27 29 -65 1 -95 -27 -29 -65 -29 -95 -1 -29 27 -29 65
+                   -1 95 27 29 65 29 95 1z" />
+                        </g>
+                    </svg>
+                    <span><a href="https://www.instagram.com/_krishkhare/" target="_blank" rel="noopener noreferrer"
+                            style="color: rgb(0, 0, 0); background: white; padding: 2px 5px; border-radius: 5px;">Instagram</a></span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- </div> -->
+    <!-- <div class="swiper-slide"> -->
+
+    <!-- </div> -->
+
+    <!-- </div> -->
+
+    <!-- If we need pagination -->
+    <!-- <div class="swiper-pagination"></div> -->
+
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+    <!-- </div> -->
+
+    <footer>
+        <div id="copyright">
+            <span>&#169; Copyright. All rights reserved</span><br>
+        </div>
+        <div id="developed_by">
+            <span>...developed in 2021 by me (Krish Khare)</span>
+        </div>
+    </footer>
+
+</body>
+
+<script src="./libraries/js/swiper-bundle.min.js"></script>
+<script src="./libraries/js/navigo.min.js"></script>
+<script src="./index.js"></script>
+<script src="./router.js"></script>
+
+</html>

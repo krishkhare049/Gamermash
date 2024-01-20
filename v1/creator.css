@@ -1,0 +1,609 @@
+
+/* For phones- min-width:300px and max-width:450px.*/
+@media(max-width:300px){
+
+
+/* Note - Do not set their position to keep them in one by one order. */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Baloo Bhai 2', Segoe UI;
+    font-weight: 600;
+    font-size: 10px;
+    /* height: 1500px; not required.*/
+    overflow-x: hidden;
+    background: url('/Images/secondheader1.png') center center/cover;
+
+}
+
+/* Creatorpage- */
+#Creator{
+    text-decoration: overline;
+    color: white;
+}
+
+/* header- */
+header{
+    border: 1px solid black;
+    /* background: rgb(176, 176, 176); */
+    /* background: url('/Images/secondheaderbackground1.png') center center/cover; */
+    height: 190px;
+    width: 101vw;
+    color: white;
+    font-size: 50px;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    margin-left: -2px;
+}
+
+header span{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 64vw;
+    text-align: center;
+}
+
+
+header span p{
+    font-size: 15px;
+}
+
+/* For some time, I have hide my identification- */
+/* #my{
+    width: 119px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+} */
+
+#my{
+    width: 119px;
+    margin: auto;
+    display: block;
+    margin-top: 40px;
+    border-radius: 100px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+/* a:hover{
+    color: black;
+} */
+/* nav- */
+nav{
+    position: fixed;
+    top: 0px;
+    left: -28px;
+    /* border: 2px solid black; */
+    height: 30px;
+    width: 100vw;
+    background: rgb(0, 119, 255);
+    padding: 13px 10px 0px 51px;
+    z-index: 5;
+}
+
+/* secondheader- */
+.secondheader{
+    /* border: 2px solid black; */
+    width: 100vw;
+    color: rgb(0, 119, 255);
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.404);
+}
+
+#secondspan{
+    /* position: relative; */
+    animation-name: creatoranim;
+    animation-duration: 15s;
+    animation-iteration-count: 2;
+    z-index: 2;
+    
+}
+@keyframes creatoranim{
+    from{
+        top: 100px ;
+    }
+    to{
+        top: -280px;
+    }
+
+}
+
+.secondheader h1{
+    text-align: center;
+    text-decoration: underline;
+    /* border: 2px solid black; */
+    font-size: 31px;
+}
+
+.secondheader p{
+    text-align: center;
+    padding: 0px 14px;
+}
+
+#playanimation{
+    border-radius: 10px;
+    height: 35px;
+    width: 165px;
+    font-size: 13px;
+    font-family:'Baloo Bhai 2', Segoe UI;  
+    color: white;
+    font-weight: 600;
+    background: rgb(0, 119, 255);
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+#playanimation:hover{
+    background: rgb(0, 81, 173);
+}
+
+/* loading- */
+#loader{
+    position: fixed;
+    top: 0;
+    left: -10px;
+    width: 106%;
+    height: 100%;
+    background: #19243C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* Its color is #18233b. */
+} 
+
+.loaderhidden{
+    animation: Fadeout 1s linear infinite;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 0px;
+}
+
+@keyframes Fadeout {
+    100%{
+        opacity: 0;
+    }
+}
+
+/* footer- */
+footer{
+    z-index: 5; /*for animation.*/
+    width: 100vw;
+    border: 2px solid black;
+    background: rgb(0, 119, 255);
+    font-size: 9px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    margin-top: 15px;
+    margin-left: -2px;
+}
+
+.footeranchor{
+    margin: 5px;
+    /* border: 2px solid black; */
+    height: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(0,119,255);
+}
+
+.footeranchor:hover{
+    background: rgb(0, 81, 173);
+    color: white;
+}
+
+}
+
+/* For phones- min-width:300px and max-width:450px.*/
+@media(min-width:300px) and (max-width:450px){
+
+
+/* Note - Do not set their position to keep them in one by one order. */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Baloo Bhai 2', Segoe UI;
+    font-weight: 600;
+    font-size: 13px;
+    /* height: 1500px; not required.*/
+    overflow-x: hidden;
+    background: url('/Images/secondheader1.png') center center/cover;
+
+}
+
+/* Creatorpage- */
+#Creator{
+    text-decoration: overline;
+    color: white;
+}
+
+/* header- */
+header{
+    border: 1px solid black;
+    /* background: rgb(176, 176, 176); */
+    /* background: url('/Images/secondheaderbackground1.png') center center/cover; */
+    height: 190px;
+    width: 101vw;
+    color: white;
+    font-size: 50px;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    margin-left: -2px;
+}
+
+header span{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 64vw;
+    text-align: center;
+}
+
+
+header span p{
+    font-size: 15px;
+}
+
+/* For some time, I have hide my identification- */
+/* #my{
+    width: 119px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+} */
+
+#my{
+    width: 119px;
+    margin: auto;
+    display: block;
+    margin-top: 43px;
+    border-radius: 200px;
+}
+
+
+
+a{
+    color: white;
+    text-decoration: none;
+}
+/* a:hover{
+    color: black;
+} */
+/* nav- */
+nav{
+    position: fixed;
+    top: 0px;
+    left: -28px;
+    /* border: 2px solid black; */
+    height: 30px;
+    width: 100vw;
+    background: rgb(0, 119, 255);
+    padding: 13px 10px 0px 51px;
+    z-index: 5;
+}
+
+/* secondheader- */
+.secondheader{
+    /* border: 2px solid black; */
+    width: 100vw;
+    color: rgb(0, 119, 255);
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.404);
+}
+
+#secondspan{
+    /* position: relative; */
+    animation-name: creatoranim;
+    animation-duration: 15s;
+    animation-iteration-count: 2;
+    z-index: 2;
+    
+}
+@keyframes creatoranim{
+    from{
+        top: 100px ;
+    }
+    to{
+        top: -280px;
+    }
+
+}
+
+.secondheader h1{
+    text-align: center;
+    text-decoration: underline;
+    /* border: 2px solid black; */
+    font-size: 31px;
+}
+
+.secondheader p{
+    text-align: center;
+    padding: 0px 45px;
+}
+
+#playanimation{
+    border-radius: 10px;
+    height: 43px;
+    width: 230px;
+    font-size: 13px;
+    font-family:'Baloo Bhai 2', Segoe UI;  
+    color: white;
+    font-weight: 600;
+    background: rgb(0, 119, 255);
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+#playanimation:hover{
+    background: rgb(0, 81, 173);
+}
+
+/* loading- */
+#loader{
+    position: fixed;
+    top: 0;
+    left: -10px;
+    width: 106%;
+    height: 100%;
+    background: #19243C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* Its color is #18233b. */
+} 
+
+.loaderhidden{
+    animation: Fadeout 1s linear infinite;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 0px;
+}
+
+@keyframes Fadeout {
+    100%{
+        opacity: 0;
+    }
+}
+
+/* footer- */
+footer{
+    z-index: 5; /*for animation.*/
+    width: 100vw;
+    border: 2px solid black;
+    background: rgb(0, 119, 255);
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    margin-top: 15px;
+    margin-left: -2px;
+}
+
+.footeranchor{
+    margin: 5px;
+    /* border: 2px solid black; */
+    height: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(0,119,255);
+}
+
+.footeranchor:hover{
+    background: rgb(0, 81, 173);
+    color: white;
+}
+
+}
+
+/* For tablets, pc and laptops- min-width:450px.*/
+@media(min-width:450px){
+
+/* Note - Do not set their position to keep them in one by one order. */
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Baloo Bhai 2', Segoe UI;
+    font-weight: 600;
+    font-size: 20px;
+    /* height: 1500px; not required.*/
+    overflow-x: hidden;
+    background: url('/Images/secondheader1.png') center center/cover;
+
+}
+
+/* Creatorpage- */
+#Creator{
+    text-decoration: overline;
+    color: white;
+}
+
+/* header- */
+header{
+    border: 1px solid black;
+    /* background: rgb(176, 176, 176); */
+    /* background: url('/Images/secondheaderbackground1.png') center center/cover; */
+    height: 268px;
+    width: 101vw;
+    color: white;
+    font-size: 50px;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    margin-left: -2px;
+}
+
+header span{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 64vw;
+    text-align: center;
+}
+
+
+header span p{
+    font-size: 15px;
+}
+
+/* For some time, I have hide my identification- */
+#my{
+    width: 200px;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+/* #my{
+    width: 200px;
+    margin: auto;
+    display: block;
+    margin-top: 84px;
+    border-radius: 200px;
+} */
+
+a{
+    color: white;
+    text-decoration: none;
+}
+/* a:hover{
+    color: black;
+} */
+/* nav- */
+nav{
+    position: fixed;
+    top: 0px;
+    /* border: 2px solid black; */
+    height: 50px;
+    width: 100vw;
+    background: rgb(0, 119, 255);
+    padding: 13px 10px 0px 51px;
+    z-index: 5;
+}
+
+/* secondheader- */
+.secondheader{
+    /* border: 2px solid black; */
+    width: 100vw;
+    color: rgb(0, 119, 255);
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.404);
+}
+
+#secondspan{
+    /* position: relative; */
+    animation-name: creatoranim;
+    animation-duration: 15s;
+    animation-iteration-count: 2;
+    z-index: 2;
+    
+}
+@keyframes creatoranim{
+    from{
+        top: 100px ;
+    }
+    to{
+        top: -280px;
+    }
+
+}
+
+.secondheader h1{
+    text-align: center;
+    text-decoration: underline;
+    /* border: 2px solid black; */
+    font-size: 50px;
+}
+
+.secondheader p{
+    text-align: center;
+    padding: 45px;
+}
+
+#playanimation{
+    border-radius: 10px;
+    height: 43px;
+    width: 230px;
+    font-size: 19px;
+    font-family:'Baloo Bhai 2', Segoe UI;
+    color: white;
+    font-weight: 600;
+    background: rgb(0, 119, 255);
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+#playanimation:hover{
+    background: rgb(0, 81, 173);
+}
+
+/* loading- */
+#loader{
+    position: fixed;
+    top: 0;
+    left: -10px;
+    width: 106%;
+    height: 100%;
+    background: #19243C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    /* Its color is #18233b. */
+} 
+
+.loaderhidden{
+    animation: Fadeout 1s linear infinite;
+    animation-fill-mode: forwards;
+    width: 0px;
+    height: 0px;
+}
+
+@keyframes Fadeout {
+    100%{
+        opacity: 0;
+    }
+}
+
+/* footer- */
+footer{
+    z-index: 5; /*for animation.*/
+    width: 100vw;
+    border: 2px solid black;
+    background: rgb(0, 119, 255);
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0px;
+    margin-top: 15px;
+    margin-left: -2px;
+}
+
+.footeranchor{
+    margin: 5px;
+    /* border: 2px solid black; */
+    height: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(0,119,255);
+}
+
+.footeranchor:hover{
+    background: rgb(0, 81, 173);
+    color: white;
+}
+
+}
